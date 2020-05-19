@@ -1,6 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+
 
 function App() {
   return (
@@ -11,7 +11,6 @@ function App() {
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
-
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item active">
@@ -23,29 +22,28 @@ function App() {
               <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Dropdown
-        </a>
-                <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a className="dropdown-item" href="#">Action</a>
-                  <a className="dropdown-item" href="#">Another action</a>
-                  <div className="dropdown-divider"></div>
-                  <a className="dropdown-item" href="#">Something else here</a>
-                </div>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </a>
               </li>
             </ul>
           </div>
         </nav>
         <div>
-        <input style = {{
-          fontsize: '24',
-          display: 'block',
-          width: "95%",
-          paddingTop: 8,
-          paddingBottom: 8,
-          paddingLeft: 16, 
-        }}placeholder="Movie Search"/>
+          <div className="container">
+            <div className="row col-md-12">
+              <h2>IMDB Movie Search</h2>
+              <hr></hr>
+            </div>
+            <div id="custom-search-input">
+              <div className="input-group col-md-12">
+                <input type="text" className="search-query form-control" placeholder="Movie Search" />
+                <span className="input-group-btn">
+                  <button className="btn btn-danger" type="button">
+                    <span className=" glyphicon glyphicon-search"></span>
+                  </button>
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       </header>
     </div>
