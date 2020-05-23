@@ -8,26 +8,25 @@ class MovieRow extends React.Component {
     }
     render() {
         return (
-            <div className="container">
-                <table key={this.props.movie.id}>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <img alt="poster" width="120" src={this.props.movie.poster_path} />
-                            </td>
-                            <div className="container">
-                                <h1> {this.props.movie.title} </h1>
+                <tbody>
+                    <table key={this.props.movie.id}>
+                        <div className="card bg-dark mb-3 ">
+                            <div className="row">
+                                <div className="col-md-3">
+                                    <img alt="poster" width="250"src={this.props.movie.poster_path} className="card-img" />
+                                </div>
+                                <div className="col-md-8">
+                                    <div className="card-body">
+                                        <h3 className="card-title">{this.props.movie.title} ({this.props.movie.vote_average})</h3>
+                                        <hr></hr>
+                                        <p className="card-text">{this.props.movie.overview}</p>
+                                        <button type="button" class="btn btn-primary" onClick={this.viewMovie.bind(this)} value="view" >View</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div className="container">
-                                <p>{this.props.movie.overview}</p>
-                                <button type="button" class="btn btn-primary" onClick={this.viewMovie.bind(this)} value="view" >View</button>
-                            </div>
-                            <td>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+                        </div>
+                    </table>
+                </tbody>
         )
     }
 }
