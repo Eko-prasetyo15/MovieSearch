@@ -12,17 +12,9 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {}
-    // const movies = [
-    //   { id: "0", poster: "https://images-na.ssl-images-amazon.com/images/I/719SFBdxRtL._AC_SY879_.jpg", title: "Avenger", deskripsi: "wskjv skdjvnskjf skdfjkldv lskjdvm" },
-    //   { id: "1", poster: "https://images-na.ssl-images-amazon.com/images/I/719SFBdxRtL._AC_SY879_.jpg", title: "Avenger", deskripsi: "wskjv skdjvnskjf skdfjkldv lskjdvm" },
-    //   ,
-    // ]
-
-
     this.perfomSearch("")
-
-
   }
+  
   perfomSearch(searchTerm) {
     console.log("ini performe seaarcch")
     const urlsearch = "https://api.themoviedb.org/3/search/movie?api_key=fb07bd7840b8c57af5696504bf028f10&query=" + searchTerm
@@ -37,18 +29,11 @@ class App extends Component {
         var movieRows = []
         results.forEach((movie) => {
           movie.poster_path = "https://image.tmdb.org/t/p/w500/" + movie.poster_path
+          movie.backdrop_path = "https://image.tmdb.org/t/p/w500/" + movie.backdrop_path
           console.log(movie.poster_path)
           const movieRow = <MovieRow movie={movie} />
           movieRows.push(movieRow)
         })
-
-        // var movieRows = []
-        //     movies.forEach((movie) => {
-        //       console.log(movie.title)
-        //       const movieRow = <MovieRow movie={movie}/>
-
-        //       movieRows.push(movieRow)
-        //     })
         this.setState({ rows: movieRows })
       },
       error: (xhr, status, err) => {
@@ -79,6 +64,7 @@ class App extends Component {
                 </div>
               </div>
             </div>
+            <br></br>
           </div>
           <div className="container">
             {this.state.rows}

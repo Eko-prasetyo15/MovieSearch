@@ -3,37 +3,35 @@ import React from "react"
 class Navbar extends React.Component {
     render() {
         return (
-            // Navigation
-            <div className="col-sm-12">
-                <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-                    <div className="row">
-                        <div className="col-sm-12">
-                        <ul class="navbar-nav mr-auto">
-                                <li><a href="https://reactjs.org/"><img src="https://revelry.co/wp-content/uploads/2019/05/react-native-UX-design.gif" width="250" height="100" /></a></li>
-                                <li><a href="https://www.themoviedb.org/"><img src="https://pbs.twimg.com/profile_images/1215507879358124032/zCYTILe6_400x400.jpg" width="250" height="100" /></a></li>
-                                <li><a href="https://21cineplex.com/"><img src="https://media3.giphy.com/media/FQkGpU34nbXrO/source.gif" width="250" height="100" /></a></li>
-                                <li><a href="https://www.youtube.com/results?search_query=movie"><img src="https://phinemo.com/wp-content/uploads/2018/08/youtube.gif" width="250" height="100" /></a></li>
-                                <li><a href="https://jquery.com/"><img src="https://www.duniailkom.com/wp-content/uploads/2015/12/jQuery-featured-duniailkom.png" width="250" height="100" /></a></li>
-
-                            </ul>
+            <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="carousel">
+                <ol className="carousel-indicators">
+                    <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active"></li>
+                    <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+                    <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+                </ol>
+                <div className="carousel-inner">
+                    <div className="carousel-item active">
+                        <img src="https://i.imgur.com/rD8Unfk.jpg" className="d-block w-100" alt="..." />
+                    </div>
+                    <div className="carousel-item">
+                        <img src="https://i.redd.it/jd5kga5lwd131.jpg" className="d-block w-100" alt="..." />
+                    </div>
+                    <div className="carousel-item">
+                        <img src="https://www.theonering.net/torwp/wp-content/uploads/2014/07/HOBBIT_1500x500_Twitter_Header_TEASE.jpg" className="d-block w-100" alt="..." />
+                        <div className="carousel-caption d-none d-md-block">
+                            <h5>Third slide label</h5>
+                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
                         </div>
                     </div>
-                    {/* <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <ul class="social-network">
-                                <li><a class="waves-effect waves-dark" href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a class="waves-effect waves-dark" href="#"><i class="fa fa-instagram"></i></a></li>
-                                <li><a class="waves-effect waves-dark" href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a class="waves-effect waves-dark" href="#"><i class="fa fa-github"></i></a></li>
-                                <li><a class="waves-effect waves-dark" href="#"><i class="fa fa-google-plus"></i></a></li>
-                            </ul>
-                        </div>
-
-                    </div> */}
-                </nav>
+                </div>
+                <a className="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span className="visually-hidden">Previous</span>
+                </a>
+                <a className="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span className="visually-hidden">Next</span>
+                </a>
             </div>
 
 
